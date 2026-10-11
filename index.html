@@ -1,13 +1,271 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World, my name is Kevin</title>
+    <title>UTUYAN | Automatización e IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        // Paleta basada en "Color Piel" solicitada
+                        piel: {
+                            DEFAULT: '#F5E4D7', 
+                            light: '#FAF3ED', 
+                            dark: '#D4BBA8', 
+                            accent: '#C79D82'
+                        },
+                        // Color pastel complementario: Azul Pizarra (Tecnológico y confiable)
+                        pizarra: {
+                            DEFAULT: '#B0BBD5',
+                            light: '#E8ECF4',
+                            dark: '#7A8BAF'
+                        },
+                        // Grises cálidos (Taupe/Carbón) que combinan perfecto con el pastel
+                        gray: {
+                            50: '#F9F8F7',
+                            100: '#F1EFED',
+                            200: '#E0DBD8',
+                            300: '#C7C0BB',
+                            400: '#A9A09A',
+                            500: '#8F857E',
+                            600: '#736963',
+                            700: '#5E5550',
+                            800: '#4E4743',
+                            900: '#3D3734', // Marrón/gris oscuro muy suave
+                            950: '#24201E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos personalizados para un toque "rebelde" y minimalista */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF3ED; /* Fondo claro general */
+            color: #3D3734; 
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #3D3734, #7A8BAF); /* Degradado oscuro a pizarra */
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-gray-900 selection:text-piel-light">
 
-    <h1>Hello World</h1>
+    <nav class="fixed w-full z-50 bg-piel/90 backdrop-blur-md border-b border-piel-dark transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <!-- Símbolo abstracto basado en la línea estética del running man -->
+                    <div class="w-8 h-8 rounded-full border-2 border-gray-900 flex items-center justify-center">
+                        <div class="w-2 h-2 bg-gray-900 rounded-full"></div>
+                    </div>
+                    <span class="font-bold text-2xl tracking-tighter text-gray-900 uppercase">Utuyan</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#origen" class="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Origen</a>
+                    <a href="#soluciones" class="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Soluciones</a>
+                    <a href="#valores" class="text-sm font-medium text-gray-600 hover:text-gray-950 transition-colors">Valores</a>
+                    <a href="#contacto" class="px-5 py-2 text-sm font-semibold bg-gray-900 text-piel-light rounded-full hover:bg-gray-700 transition-all">Hablemos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-piel">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-pizarra-dark bg-pizarra-light/80 backdrop-blur-sm">
+                <span class="text-xs font-semibold tracking-wider text-pizarra-dark uppercase">Simple. Rebelde. Amigable.</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight text-gray-950">
+                Automatización e IA para <br class="hidden md:block">
+                <span class="text-gradient">transformar procesos.</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-gray-600 font-light mb-10">
+                Facilitamos herramientas tecnológicas mediante una consultoría holística para emprendedores y comerciantes. Calidad, confiabilidad y mantenibilidad.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#soluciones" class="px-8 py-4 bg-gray-900 text-piel-light rounded-full font-semibold hover:bg-gray-800 transition-all flex items-center justify-center gap-2">
+                    Conoce cómo <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#origen" class="px-8 py-4 bg-pizarra text-gray-950 rounded-full font-semibold hover:bg-pizarra-dark hover:text-white transition-all">
+                    Nuestra Identidad
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="origen" class="py-24 bg-gray-950 border-y border-gray-800 text-piel-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 text-piel">Fuerte. <br>Líder distinto.</h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        <strong class="text-white">UTUYAN</strong> nace de las raíces quechuas ("Utuya" + "pushan"). Representa nuestra identidad peruana y nuestra ambición de mostrar al mundo empresarial que desde Perú también se pueden crear consultoras internacionales de alto impacto.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        Nos motiva profundamente la pasión por automatizar procesos y el ahorro tangible que podemos generar en las empresas, permitiéndoles crecer con menos recursos.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover">
+                        <i class="fa-solid fa-bullseye text-3xl text-piel mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-white">Misión</h3>
+                        <p class="text-gray-400 text-sm">Desarrollar soluciones de automatización y agentes de IA con impacto en diversos sectores, asegurando calidad y confiabilidad.</p>
+                    </div>
+                    <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover sm:mt-8">
+                        <i class="fa-regular fa-eye text-3xl text-piel mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3 text-white">Visión</h3>
+                        <p class="text-gray-400 text-sm">Ser la organización líder en crear soluciones de impacto profundo en diversos sectores a nivel global.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="soluciones" class="py-24 bg-pizarra-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-gray-950">A quiénes ayudamos</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
+                El equipo busca convertir los procesos de distintos negocios para generar un valor real y sostenible.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                <div class="p-8 border border-pizarra rounded-3xl bg-white/60 backdrop-blur-sm card-hover">
+                    <div class="w-12 h-12 bg-pizarra rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-store text-gray-950 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Emprendedores Minoristas</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Negocios y comerciantes que operan con pocos recursos. Optimizamos sus operaciones para que puedan competir como grandes empresas.
+                    </p>
+                </div>
+                <div class="p-8 border border-pizarra rounded-3xl bg-white/60 backdrop-blur-sm card-hover">
+                    <div class="w-12 h-12 bg-pizarra rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-robot text-gray-950 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Agentes de IA</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Implementación de inteligencia artificial para tareas repetitivas. Transformamos lo tradicional en sistemas inteligentes y autónomos.
+                    </p>
+                </div>
+                <div class="p-8 border border-pizarra rounded-3xl bg-white/60 backdrop-blur-sm card-hover">
+                    <div class="w-12 h-12 bg-pizarra rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-magnifying-glass-chart text-gray-950 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Consultoría Holística</h3>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Analizamos cada parte de tu proceso productivo para identificar puntos clave de mejora, asegurando resultados mantenibles a largo plazo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valores" class="py-24 bg-white text-gray-950 rounded-t-[3rem] mt-10 shadow-[0_-10px_40px_rgba(0,0,0,0.05)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight mb-4">Nuestros Pilares</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Los tres valores fundamentales que nos mantienen firmes en el mercado y guían cada solución que creamos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border border-piel-dark rounded-2xl flex items-center justify-center mb-6 bg-piel-light group-hover:bg-piel group-hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-bolt text-2xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Proactividad</h3>
+                    <p class="text-gray-600">Nos anticipamos a los problemas, buscando siempre la forma más eficiente de optimizar los recursos antes de que sea crítico.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border border-piel-dark rounded-2xl flex items-center justify-center mb-6 bg-piel-light group-hover:bg-piel group-hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-hands-holding-circle text-2xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Empatía</h3>
+                    <p class="text-gray-600">Entendemos la realidad del comerciante minorista. Diseñamos soluciones humanas, amigables y pensadas en el usuario final.</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-20 h-20 mx-auto border border-piel-dark rounded-2xl flex items-center justify-center mb-6 bg-piel-light group-hover:bg-piel group-hover:shadow-lg transition-all duration-300">
+                        <i class="fa-solid fa-flag text-2xl text-gray-800"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Liderazgo</h3>
+                    <p class="text-gray-600">Somos rebeldes en la industria. Guiamos a nuestros clientes hacia la innovación, convirtiéndonos en un socio estratégico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-gray-950 text-piel-light py-16 border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2 tracking-tight text-white">¿Listo para transformar tu negocio?</h2>
+                    <p class="text-gray-400">Únete a la revolución de la IA y la automatización.</p>
+                </div>
+                <a href="#" class="px-8 py-4 bg-pizarra text-gray-950 rounded-full font-semibold hover:bg-pizarra-dark hover:text-white transition-all flex items-center gap-2">
+                    Inicia tu consultoría <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-800 pt-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 rounded-full border-2 border-piel flex items-center justify-center">
+                            <div class="w-1.5 h-1.5 bg-piel rounded-full"></div>
+                        </div>
+                        <span class="font-bold text-xl tracking-tighter uppercase text-white">Utuyan</span>
+                    </div>
+                    <p class="text-gray-400 text-sm max-w-xs">
+                        Soluciones de calidad, confiables y mantenibles. Identidad peruana, estándar internacional.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-piel-dark">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#origen" class="text-gray-400 hover:text-piel">Nuestra Identidad</a></li>
+                        <li><a href="#soluciones" class="text-gray-400 hover:text-piel">Servicios</a></li>
+                        <li><a href="#valores" class="text-gray-400 hover:text-piel">Valores</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-sm uppercase tracking-wider text-piel-dark">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-gray-400 hover:text-piel">Privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-piel">Términos de servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 text-center md:text-left text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2024 Utuyan. Todos los derechos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-piel"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-piel"><i class="fa-brands fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
